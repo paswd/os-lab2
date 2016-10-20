@@ -27,3 +27,7 @@
 *.exe
 *.out
 *.app
+
+handler
+os-lab2
+out.txt
