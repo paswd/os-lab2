@@ -9,8 +9,5 @@ start: main.o
 main.o: main.cpp
 	$(COMPILLER) -c $(FLAGS) main.cpp
 
-handler: handler.cpp
-	$(COMPILLER) $(FLAGS) -o handler handler.cpp
-
 clear:
-	-rm -f *.o *.gch handler os-lab2
+	-rm -f *.o *.gch os-lab2
