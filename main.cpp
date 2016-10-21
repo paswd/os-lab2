@@ -60,6 +60,7 @@ int main()
 		ofstream out(filename.c_str());
 		out << str << endl;
 		out.close();
+		close(pipedes[0]);
 	}
 
 	return 0;
