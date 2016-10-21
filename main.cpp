@@ -9,19 +9,18 @@ using namespace std;
 
 int main()
 {
-	int sym;
-	string in = "";
-
-	while ((sym = getchar()) != EOF) {
-		in += (char) sym;
-	}
-
 	int pipedes[2];
 	pid_t pid;
 	pipe(pipedes);
 	pid = fork();
 
 	if (pid > 0) {
+		int sym;
+		string in = "";
+		while ((sym = getchar()) != EOF) {
+			in += (char) sym;
+		}
+
 		string filename = "out.txt";
 		close(pipedes[0]);
 		filename += '\t';
